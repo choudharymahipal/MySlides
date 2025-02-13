@@ -1,0 +1,28 @@
+<div class="container">
+    <h2 class="text-white">Home Page</h2>
+    <div>
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">SLIDE NAME</th>
+                    <th scope="col">VIEW SLIDE</th>
+                    <th scope="col">VIEW ON YOUTUBE</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (item of tableData; track $index) {
+                <tr>
+                    <td scope="row">{{item.id}}</td>
+                    <td scope="row">{{item.slideName}}</td>
+                    <td scope="row">
+                        <a [routerLink]="item.viewSlide">View</a>
+                    </td>
+                    <td scope="row">{{item.youtubeLink}}</td>
+                </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>
